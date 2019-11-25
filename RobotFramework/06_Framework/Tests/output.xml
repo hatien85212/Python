@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20190626 13:26:39.155" generator="Robot 3.1.1 (Python 2.7.13 on win32)">
+<suite source="C:\WORKING\10_PYTHON\RobotFramework\06_Framework\Tests\valid_login.robot" id="s1" name="Valid Login">
+<test id="s1-t1" name="Login Success">
+<status status="FAIL" endtime="20190626 13:26:39.701" critical="yes" starttime="20190626 13:26:39.700">Test case contains no keywords.</status>
+</test>
+<test id="s1-t2" name="[Documentation] Test">
+<kw name="Login Success" library="Resource">
+<kw name="Open Browser To Login Page and Maximize" library="Resource">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${LOGIN_URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20190626 13:26:39.705" level="INFO">Opening browser 'ff' to base url 'http://intranet.terralogic.com/'.</msg>
+<status status="PASS" endtime="20190626 13:26:53.531" starttime="20190626 13:26:39.705"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20190626 13:26:53.544" starttime="20190626 13:26:53.532"></status>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" endtime="20190626 13:26:53.545" starttime="20190626 13:26:53.545"></status>
+</kw>
+<status status="PASS" endtime="20190626 13:26:53.545" starttime="20190626 13:26:39.704"></status>
+</kw>
+<kw name="Input Username" library="Resource">
+<arguments>
+<arg>${VALID_USER}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txt_name}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20190626 13:26:53.547" level="INFO">Typing text 'tien.dao@terralogic.com' into text field 'id:username'.</msg>
+<status status="PASS" endtime="20190626 13:26:53.858" starttime="20190626 13:26:53.546"></status>
+</kw>
+<status status="PASS" endtime="20190626 13:26:53.859" starttime="20190626 13:26:53.545"></status>
+</kw>
+<kw name="Input Pass" library="Resource">
+<arguments>
+<arg>${VALID_PASSWORD}</arg>
+</arguments>
+<kw name="Input Password" library="Selenium2Library">
+<doc>Types the given password into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txt_pass}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20190626 13:26:53.861" level="INFO">Typing password into text field 'id:password'.</msg>
+<status status="PASS" endtime="20190626 13:26:54.004" starttime="20190626 13:26:53.860"></status>
+</kw>
+<status status="PASS" endtime="20190626 13:26:54.005" starttime="20190626 13:26:53.859"></status>
+</kw>
+<kw name="Submit Credentials" library="Resource">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${btn_login}</arg>
+</arguments>
+<msg timestamp="20190626 13:26:54.006" level="INFO">Clicking button 'id:signin'.</msg>
+<status status="PASS" endtime="20190626 13:26:54.352" starttime="20190626 13:26:54.005"></status>
+</kw>
+<status status="PASS" endtime="20190626 13:26:54.353" starttime="20190626 13:26:54.005"></status>
+</kw>
+<kw name="Welcome page should be open" library="Resource">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Login is successful</arg>
+</arguments>
+<status status="PASS" endtime="20190626 13:26:54.354" starttime="20190626 13:26:54.353"></status>
+</kw>
+<kw name="Wait Until Element Contains" library="Selenium2Library">
+<doc>Waits until element ``locator`` contains ``text``.</doc>
+<arguments>
+<arg>${lbl_welcome}</arg>
+<arg>Welcome</arg>
+</arguments>
+<status status="PASS" endtime="20190626 13:26:57.258" starttime="20190626 13:26:54.355"></status>
+</kw>
+<kw name="Get Window Titles" library="Selenium2Library">
+<doc>Returns and logs titles of all known browser windows.</doc>
+<msg timestamp="20190626 13:26:57.307" level="INFO">Altogether 1 item.
+1: Terralogic Inc.</msg>
+<status status="PASS" endtime="20190626 13:26:57.307" starttime="20190626 13:26:57.258"></status>
+</kw>
+<status status="PASS" endtime="20190626 13:26:57.307" starttime="20190626 13:26:54.353"></status>
+</kw>
+<status status="PASS" endtime="20190626 13:26:57.307" starttime="20190626 13:26:39.704"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20190626 13:27:00.772" starttime="20190626 13:26:58.620"></status>
+</kw>
+<status status="PASS" endtime="20190626 13:27:00.773" critical="yes" starttime="20190626 13:26:39.703"></status>
+</test>
+<status status="FAIL" endtime="20190626 13:27:00.775" starttime="20190626 13:26:39.158"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="1">Critical Tests</stat>
+<stat fail="1" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="Valid Login" pass="1">Valid Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

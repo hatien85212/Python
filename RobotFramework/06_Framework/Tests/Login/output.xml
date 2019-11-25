@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20191007 11:22:41.119" generator="Robot 3.1.1 (Python 2.7.13 on win32)">
+<suite source="C:\WORKING\10_PYTHON\RobotFramework\06_Framework\Tests\Login\valid_login.robot" id="s1" name="Valid Login">
+<test id="s1-t1" name="Login Success">
+<kw name="Login Success" library="loginPage">
+<assign>
+<var>${res}</var>
+</assign>
+<kw name="Open Browser To Login Page and Maximize" library="loginPage">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${LOGIN_URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20191007 11:22:41.734" level="INFO">Opening browser 'ff' to base url 'http://intranet.terralogic.com/'.</msg>
+<status status="PASS" endtime="20191007 11:23:04.877" starttime="20191007 11:22:41.734"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20191007 11:23:04.882" starttime="20191007 11:23:04.877"></status>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" endtime="20191007 11:23:04.882" starttime="20191007 11:23:04.882"></status>
+</kw>
+<status status="PASS" endtime="20191007 11:23:04.882" starttime="20191007 11:22:41.734"></status>
+</kw>
+<kw name="Input Username" library="loginPage">
+<arguments>
+<arg>${VALID_USER}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txt_name}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20191007 11:23:04.883" level="INFO">Typing text 'tien.dao@terralogic.com' into text field 'id:username'.</msg>
+<status status="PASS" endtime="20191007 11:23:05.252" starttime="20191007 11:23:04.883"></status>
+</kw>
+<status status="PASS" endtime="20191007 11:23:05.252" starttime="20191007 11:23:04.882"></status>
+</kw>
+<kw name="Input Pass" library="loginPage">
+<arguments>
+<arg>${VALID_PASSWORD}</arg>
+</arguments>
+<kw name="Input Password" library="SeleniumLibrary">
+<doc>Types the given password into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txt_pass}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20191007 11:23:05.253" level="INFO">Typing password into text field 'id:password'.</msg>
+<status status="PASS" endtime="20191007 11:23:05.411" starttime="20191007 11:23:05.253"></status>
+</kw>
+<status status="PASS" endtime="20191007 11:23:05.412" starttime="20191007 11:23:05.252"></status>
+</kw>
+<kw name="Submit Credentials" library="loginPage">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${btn_login}</arg>
+</arguments>
+<msg timestamp="20191007 11:23:05.413" level="INFO">Clicking button 'id:signin'.</msg>
+<status status="PASS" endtime="20191007 11:23:05.728" starttime="20191007 11:23:05.412"></status>
+</kw>
+<status status="PASS" endtime="20191007 11:23:05.728" starttime="20191007 11:23:05.412"></status>
+</kw>
+<kw name="Welcome page should be open" library="loginPage">
+<assign>
+<var>${title}</var>
+</assign>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Login is successful</arg>
+</arguments>
+<status status="PASS" endtime="20191007 11:23:05.729" starttime="20191007 11:23:05.728"></status>
+</kw>
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` contains ``text``.</doc>
+<arguments>
+<arg>${lbl_welcome}</arg>
+<arg>Welcome</arg>
+</arguments>
+<status status="PASS" endtime="20191007 11:23:08.835" starttime="20191007 11:23:05.729"></status>
+</kw>
+<kw name="Get Window Titles" library="SeleniumLibrary">
+<doc>Returns and logs titles of all known browser windows.</doc>
+<msg timestamp="20191007 11:23:08.901" level="INFO">Altogether 1 item.
+1: Terralogic Inc.</msg>
+<status status="PASS" endtime="20191007 11:23:08.901" starttime="20191007 11:23:08.835"></status>
+</kw>
+<kw name="Get Title" library="SeleniumLibrary">
+<doc>Returns the title of current page.</doc>
+<assign>
+<var>${title}</var>
+</assign>
+<msg timestamp="20191007 11:23:08.910" level="INFO">${title} = Terralogic Inc.</msg>
+<status status="PASS" endtime="20191007 11:23:08.910" starttime="20191007 11:23:08.901"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${title}</arg>
+</arguments>
+<msg timestamp="20191007 11:23:08.911" level="INFO">Terralogic Inc.</msg>
+<status status="PASS" endtime="20191007 11:23:08.911" starttime="20191007 11:23:08.910"></status>
+</kw>
+<msg timestamp="20191007 11:23:08.911" level="INFO">${title} = Terralogic Inc.</msg>
+<status status="PASS" endtime="20191007 11:23:08.911" starttime="20191007 11:23:05.728"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${title}</arg>
+</arguments>
+<msg timestamp="20191007 11:23:08.912" level="INFO">Terralogic Inc.</msg>
+<status status="PASS" endtime="20191007 11:23:08.912" starttime="20191007 11:23:08.911"></status>
+</kw>
+<msg timestamp="20191007 11:23:08.912" level="INFO">${res} = True</msg>
+<status status="PASS" endtime="20191007 11:23:08.912" starttime="20191007 11:22:41.733"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${res}</arg>
+</arguments>
+<msg timestamp="20191007 11:23:08.914" level="INFO">True</msg>
+<status status="PASS" endtime="20191007 11:23:08.914" starttime="20191007 11:23:08.913"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20191007 11:23:38.063" starttime="20191007 11:23:08.915"></status>
+</kw>
+<status status="PASS" endtime="20191007 11:23:38.064" critical="yes" starttime="20191007 11:22:41.732"></status>
+</test>
+<test id="s1-t2" name="Test case2">
+<kw name="Create Folder A" library="loginPage">
+<arguments>
+<arg>C:\\RF</arg>
+</arguments>
+<kw name="Create Folder" library="UserKeywords">
+<arguments>
+<arg>${path}</arg>
+</arguments>
+<msg timestamp="20191007 11:23:38.069" level="INFO">The folder is exist</msg>
+<status status="PASS" endtime="20191007 11:23:38.070" starttime="20191007 11:23:38.068"></status>
+</kw>
+<status status="PASS" endtime="20191007 11:23:38.070" starttime="20191007 11:23:38.068"></status>
+</kw>
+<status status="PASS" endtime="20191007 11:23:38.071" critical="yes" starttime="20191007 11:23:38.066"></status>
+</test>
+<doc>A test suite with a single test for valid login.
+
+This test has a workflow that is created using keywords in
+the imported resource file.</doc>
+<status status="PASS" endtime="20191007 11:23:38.075" starttime="20191007 11:22:41.122"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="2">Critical Tests</stat>
+<stat fail="0" pass="2">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Valid Login" pass="2">Valid Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
